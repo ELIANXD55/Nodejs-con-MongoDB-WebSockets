@@ -1,0 +1,19 @@
+{
+  "name": "curso-de-nodejs-base-de-datos-con-mongodb-y-websockets",
+  "version": "1.0.0",
+  "description": "SERVER WITH MONGO AND EXPRESS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "author": "Elian",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "mongoos": "^0.0.1-security",
+    "mongoose": "^6.8.0",
+    "nodemon": "^2.0.20"
+  }
+}
