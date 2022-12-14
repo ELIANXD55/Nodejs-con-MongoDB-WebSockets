@@ -3,15 +3,6 @@ const Model = require("./model");
 
 
 
-db.Promise = global.Promise;
-
-db.connect(
-  "mongodb+srv://elianxd:LUZUFLOO777@telegrum.jnbuyhs.mongodb.net/?retryWrites=true&w=majority",
-  { useNewUrlParser: true }
-)
-  .then(() => console.log("[db] Conectada con éxito"))
-  .catch((err) => console.error("[db]", err));
-console.log("[db] Conectada con exito");
 
 const list = [];
 
@@ -43,8 +34,15 @@ async function updateText(id, message) {
   return newMessage;
 }
 
+function removeMessage(id) {
+  return Model.deleteOne({
+    _id: id,
+    
+  })
+}
 module.exports = {
   add: addMessage,
   list: getMessages,
   updateText: updateText,
+  remove: removeMessage,
 };
